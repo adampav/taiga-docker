@@ -17,7 +17,7 @@ RUN \
 
 # Download the code
 RUN \
-  su - taiga
-  git clone https://github.com/taigaio/taiga-back.git taiga-back
-  cd taiga-back
+  su - taiga && \
+  git clone https://github.com/taigaio/taiga-back.git taiga-back && \
+  cd taiga-back && \
   git checkout stable
