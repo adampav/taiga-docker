@@ -7,13 +7,13 @@ RUN \
   apt-get install -y libfreetype6-dev zlib1g-dev libzmq3-dev libgdbm-dev libncurses5-dev && \
   apt-get install -y automake libtool libffi-dev curl git tmux gettext && \
   apt-get install -y circus && \
-  apt-get install git python3-dev python-dev python-pip virtualenvwrapper
+  apt-get install git python3-dev python-dev python-pip
 
 # Create taiga user
 RUN \
-  adduser taiga
-  adduser taiga sudo
-
+  mkdir -p /opt/taiga && \
+  mkdir -p /opt/taiga/media /opt/taiga/static /opt/taiga/logs && \
+  useradd -d /opt/taiga taiga && \
 
 # Download the code
 RUN \
