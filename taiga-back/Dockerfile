@@ -18,6 +18,6 @@ RUN \
 RUN \
   su - taiga && \
   git clone https://github.com/taigaio/taiga-back.git /opt/taiga/taiga-back && \
-  cd taiga-back && \
+  cd /opt/taiga/taiga-back && \
   git checkout stable && \
   pip install -r requirements.txt
