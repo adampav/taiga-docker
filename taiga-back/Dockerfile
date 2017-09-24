@@ -21,3 +21,9 @@ RUN \
   cd /opt/taiga/taiga-back && \
   git checkout stable && \
   pip install -r requirements.txt
+  
+
+# Populate Database + Sample Data
+
+
+# Copy Configuration
